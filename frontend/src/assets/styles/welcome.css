@@ -18,11 +18,17 @@
     font-size: 40px;margin-bottom: 25px;
 }
 .hero-section h3 {
-    font-size: 40px;
+    font-size: 23px;
     width: 100%;
     max-width: 750px;
     text-align: right;
-    margin: 20px 0;
+    margin: 30px 0;
+     color:rgb(73, 53, 11);
+}
+.hero-section h2 {
+    font-size: 30px;
+    color:rgb(73, 53, 11);
+   
 }
 .hero-section div {
    display: inline-flex;

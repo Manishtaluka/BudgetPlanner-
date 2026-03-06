@@ -12,18 +12,19 @@
 }
 
 .light {
-  --second: #4389df;
+  --second: #2a6e06;
   --third: #f7fbff;
   --hover: #dbebff;
-  --main: #a4cdff;
+  --main: #81c4d3;
+  --text: #2a6e06;
 }
 
 .dark {
-  --second: #67a2eb;
-  --third: #031c3b;
+  --second: #4aab4f;
+  --third: #1b4305;
   --text: rgb(234, 234, 234);
-  --hover: #21314e;
-  --main: #3b4763;
+  --hover: #5e5a11;
+  --main: #4aab4f;
 }
 ::selection {
   background-color: var(--second);
