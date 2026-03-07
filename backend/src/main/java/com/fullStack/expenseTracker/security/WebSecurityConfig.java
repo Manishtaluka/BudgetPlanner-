@@ -52,7 +52,6 @@ public class WebSecurityConfig {
     }
 
     @Bean
-    @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable)
                 .exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler))
@@ -63,16 +62,13 @@ public class WebSecurityConfig {
                                 .requestMatchers("/mywallet/category/**").permitAll()
                                 .requestMatchers("/mywallet/transaction/**").permitAll()
                                 .requestMatchers("/mywallet/user/**").permitAll()
-                                // --- ADD THESE TWO LINES ---
-                                .requestMatchers("/").permitAll()      // Allows Render's health check
-                                .requestMatchers("/error").permitAll() // Prevents security loops on errors
-                                // ---------------------------
                                 .anyRequest().authenticated()
                 );
-    
+
         http.authenticationProvider(authenticationProvider());
+
         http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
-    
+
         return http.build();
     }
 }
