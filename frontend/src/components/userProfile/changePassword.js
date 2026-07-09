@@ -51,7 +51,7 @@ function ChangePassword({email}) {
             </div>
 
             <div className='input-box'>
-                <label>Password</label><br/>
+                <label>New Password</label><br/>
                 <input 
                     type='password'
                     {
